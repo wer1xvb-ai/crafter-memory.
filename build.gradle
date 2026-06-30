@@ -1,0 +1,33 @@
+plugins {
+    id 'fabric-loom' version '1.7-SNAPSHOT'
+}
+
+version = '1.0.0'
+group = 'com.example'
+
+base {
+    archivesName = 'crafter_memory'
+}
+
+repositories {
+    maven { url = "https://fabricmc.net" }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:26.2"
+    mappings "net.fabricmc:yarn:26.2+build.1:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.15.11"
+}
+
+processResources {
+    inputs.property "version", project.version
+    filteringCharset "UTF-8"
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 25
+}
