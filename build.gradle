@@ -1,6 +1,7 @@
 plugins {
-    id 'net.fabricmc.fabric-loom' version '1.9-SNAPSHOT'
+    id 'fabric-loom' version '1.9-SNAPSHOT'
 }
+
 
 version = '1.0.0'
 group = 'com.example'
