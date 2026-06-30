@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "crafter_memory",
+  "version": "1.0.0",
+  "name": "Crafter Memory Addon",
+  "entrypoints": { "main": [ "com.example.craftermemory.CrafterMemoryMod" ] },
+  "mixins": [ "crafter_memory.mixins.json" ],
+  "depends": { "fabricloader": ">=0.15.0", "minecraft": "26.2", "java": ">=25" }
+}
