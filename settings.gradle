@@ -1,8 +1,1 @@
-pluginManagement {
-    repositories {
-        maven { url = "https://fabricmc.net" }
-        gradlePluginPortal()
-    }
-}
-
 rootProject.name = 'crafter_memory'
