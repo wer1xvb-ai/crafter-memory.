@@ -16,13 +16,8 @@ repositories {
 
 dependencies {
     minecraft "com.mojang:minecraft:26.2"
-    modImplementation "net.fabricmc:fabric-loader:0.15.11"
+    implementation "net.fabricmc:fabric-loader:0.15.11"
 }
-
-
-
-
-
 
 processResources {
     inputs.property "version", project.version
@@ -35,4 +30,6 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
     it.options.release = 25
+    // Это заставит компилятор Java принудительно подтянуть библиотеки Майнкрафта
+    it.options.compilerArgs << "-Xlint:none"
 }
