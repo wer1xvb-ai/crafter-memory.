@@ -24,9 +24,12 @@ repositories {
 
 dependencies {
     minecraft "com.mojang:minecraft:26.2"
-    mappings loom.officialMojangMappings()
+    mappings loom.layered {
+        officialMojangMappings()
+    }
     modImplementation "net.fabricmc:fabric-loader:0.15.11"
 }
+
 
 processResources {
     inputs.property "version", project.version
