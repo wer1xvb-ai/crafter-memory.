@@ -1,8 +1,12 @@
 pluginManagement {
     repositories {
-        maven { url = "https://maven.fabricmc.net/" }
+        maven { url = "https://fabricmc.net" }
         gradlePluginPortal()
     }
+}
+
+plugins {
+    id 'net.fabricmc.fabric-loom' version '1.15-SNAPSHOT'
 }
 
 rootProject.name = 'crafter_memory'
